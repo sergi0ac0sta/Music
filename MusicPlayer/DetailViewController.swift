@@ -7,39 +7,77 @@
 //
 
 import UIKit
+import AVFoundation
 
 class DetailViewController: UIViewController {
+    var song: Song = Song(title: "", artist: "", cover: UIImage(named: "ViciousDelicious")!)
+    private var player: AVAudioPlayer!
 
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
-
-
+    @IBOutlet weak var lblTitle: UILabel!
+    @IBOutlet weak var lblArtist: UILabel!
+    @IBOutlet weak var imgCover: UIImageView!
+    
+    @IBOutlet weak var btnPlay: UIButton!
+    @IBOutlet weak var btnPause: UIButton!
+    
+    @IBOutlet weak var sldVolume: UISlider!
+    
     var detailItem: AnyObject? {
         didSet {
             // Update the view.
             self.configureView()
         }
     }
-
+    
     func configureView() {
-        // Update the user interface for the detail item.
+        /*
         if let detail = self.detailItem {
             if let label = self.detailDescriptionLabel {
                 label.text = detail.description
             }
         }
+        */
     }
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        self.configureView()
+        lblTitle.text = song.title
+        lblArtist.text = song.artist
+        imgCover.image = song.cover
+        
+        let songUrl = NSBundle.mainBundle().URLForResource(song.title, withExtension: "mp3")
+        do {
+            try player = AVAudioPlayer(contentsOfURL: songUrl!)
+        } catch {
+            print("Error al cargar el archivo de musica.")
+        }
+        sldVolume.value = AVAudioSession.sharedInstance().outputVolume
+        play()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func play() {
+        if !player.playing {
+            player.play()
+        }
     }
-
-
+    
+    @IBAction func pause() {
+        if player.playing {
+            player.pause()
+        }
+    }
+    
+    @IBAction func stop() {
+        if player.playing {
+            player.stop()
+        }
+        player.currentTime = 0.0
+    }
+    
+    @IBAction func Volume(sender: AnyObject) {
+        player.volume = sender.value
+    }
+    
 }
 

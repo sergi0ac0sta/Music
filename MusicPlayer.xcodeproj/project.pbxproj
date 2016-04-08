@@ -13,6 +13,12 @@
 		491370221CB7FF7900767827 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 491370201CB7FF7900767827 /* Main.storyboard */; };
 		491370241CB7FF7900767827 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 491370231CB7FF7900767827 /* Assets.xcassets */; };
 		491370271CB7FF7900767827 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 491370251CB7FF7900767827 /* LaunchScreen.storyboard */; };
+		491370371CB8031800767827 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491370361CB8031800767827 /* Song.swift */; };
+		4913703D1CB8278E00767827 /* Becoming Insane.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 491370381CB8278E00767827 /* Becoming Insane.mp3 */; };
+		4913703E1CB8278E00767827 /* The Dog Days Are Over.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 491370391CB8278E00767827 /* The Dog Days Are Over.mp3 */; };
+		4913703F1CB8278E00767827 /* Immigrant Song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4913703A1CB8278E00767827 /* Immigrant Song.mp3 */; };
+		491370401CB8278E00767827 /* We Found Love.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4913703B1CB8278E00767827 /* We Found Love.mp3 */; };
+		491370411CB8278E00767827 /* What Else Is There.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4913703C1CB8278E00767827 /* What Else Is There.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		491370231CB7FF7900767827 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		491370261CB7FF7900767827 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		491370281CB7FF7900767827 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		491370361CB8031800767827 /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		491370381CB8278E00767827 /* Becoming Insane.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Becoming Insane.mp3"; sourceTree = "<group>"; };
+		491370391CB8278E00767827 /* The Dog Days Are Over.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "The Dog Days Are Over.mp3"; sourceTree = "<group>"; };
+		4913703A1CB8278E00767827 /* Immigrant Song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Immigrant Song.mp3"; sourceTree = "<group>"; };
+		4913703B1CB8278E00767827 /* We Found Love.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "We Found Love.mp3"; sourceTree = "<group>"; };
+		4913703C1CB8278E00767827 /* What Else Is There.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "What Else Is There.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +68,45 @@
 		491370191CB7FF7900767827 /* MusicPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				491370351CB8028900767827 /* Controllers */,
+				491370341CB8028000767827 /* Models */,
+				4913702E1CB8007700767827 /* Songs */,
 				4913701A1CB7FF7900767827 /* AppDelegate.swift */,
-				4913701C1CB7FF7900767827 /* MasterViewController.swift */,
-				4913701E1CB7FF7900767827 /* DetailViewController.swift */,
 				491370201CB7FF7900767827 /* Main.storyboard */,
 				491370231CB7FF7900767827 /* Assets.xcassets */,
 				491370251CB7FF7900767827 /* LaunchScreen.storyboard */,
 				491370281CB7FF7900767827 /* Info.plist */,
 			);
 			path = MusicPlayer;
+			sourceTree = "<group>";
+		};
+		4913702E1CB8007700767827 /* Songs */ = {
+			isa = PBXGroup;
+			children = (
+				491370381CB8278E00767827 /* Becoming Insane.mp3 */,
+				491370391CB8278E00767827 /* The Dog Days Are Over.mp3 */,
+				4913703A1CB8278E00767827 /* Immigrant Song.mp3 */,
+				4913703B1CB8278E00767827 /* We Found Love.mp3 */,
+				4913703C1CB8278E00767827 /* What Else Is There.mp3 */,
+			);
+			name = Songs;
+			sourceTree = "<group>";
+		};
+		491370341CB8028000767827 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				491370361CB8031800767827 /* Song.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		491370351CB8028900767827 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4913701C1CB7FF7900767827 /* MasterViewController.swift */,
+				4913701E1CB7FF7900767827 /* DetailViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,6 +141,7 @@
 				TargetAttributes = {
 					491370161CB7FF7800767827 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = L9B8JU68WF;
 					};
 				};
 			};
@@ -125,8 +168,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4913703F1CB8278E00767827 /* Immigrant Song.mp3 in Resources */,
 				491370271CB7FF7900767827 /* LaunchScreen.storyboard in Resources */,
+				491370411CB8278E00767827 /* What Else Is There.mp3 in Resources */,
+				491370401CB8278E00767827 /* We Found Love.mp3 in Resources */,
 				491370241CB7FF7900767827 /* Assets.xcassets in Resources */,
+				4913703E1CB8278E00767827 /* The Dog Days Are Over.mp3 in Resources */,
+				4913703D1CB8278E00767827 /* Becoming Insane.mp3 in Resources */,
 				491370221CB7FF7900767827 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,6 +186,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				491370371CB8031800767827 /* Song.swift in Sources */,
 				4913701F1CB7FF7900767827 /* DetailViewController.swift in Sources */,
 				4913701D1CB7FF7900767827 /* MasterViewController.swift in Sources */,
 				4913701B1CB7FF7900767827 /* AppDelegate.swift in Sources */,
@@ -253,10 +302,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MusicPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.sergioacosta.MusicPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -264,10 +316,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MusicPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.sergioacosta.MusicPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
