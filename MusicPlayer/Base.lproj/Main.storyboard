@@ -236,7 +236,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Canciones" id="Zdf-7t-Un8">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="hy6-HJ-kJd">
+                        <barButtonItem key="rightBarButtonItem" style="done" id="hy6-HJ-kJd">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xho-Ni-U5p">
                                 <rect key="frame" x="530" y="-3" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
